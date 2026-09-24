@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Online Compiler</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">Online Compiler</div>
+    <div class="controls">
+      <select id="languageSelect"></select>
+      <button id="runBtn">▶ Run</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="editor-pane">
+      <div id="editor"></div>
+    </section>
+
+    <section class="io-pane">
+      <div class="io-block">
+        <div class="io-label">Input (stdin)</div>
+        <textarea id="stdinBox" placeholder="Optional input for your program..."></textarea>
+      </div>
+      <div class="io-block output-block">
+        <div class="io-label">Output</div>
+        <pre id="outputBox">Run your code to see output here.</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusText">Ready</span>
+  </footer>
+
+  <!-- Monaco Editor via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.49.0/min/vs/loader.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
